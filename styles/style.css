@@ -1,0 +1,115 @@
+
+/*  ! Used Better comments , dont't confuse btw real code and commented */
+
+
+/* 
+    * There are multiple selectors 
+
+   * .my-class (dot className)
+   * #my-id 
+   *  p(tag) 
+   * if multiple selectors presents , seperate them using comma (,)
+
+*/
+
+/* ! boxes  
+
+! 1. padding means space surrounding contest 
+! 2. border just outside padding , just border line 
+! 3. margin space btw border 
+
+*/
+
+
+/* * Here , p is called selector, selects all paragraphs in the HTML */
+
+/* p{   
+    /* *  {} is called declaration */
+
+    /*color: red;  here color is called property , red is called property value 
+
+   } */
+ /* Entire from p{} is called ruleset , in short rule */
+
+/* Lets look another ruleset  */
+
+/*p {
+    /* property & property value need to must be separated using : (Colon ) , and must use semicolor (;) to separate one declaration from the next  */
+    /* width: 500px;
+    border: 1px solid black;
+} */
+
+/* ---------------------------------------------------------------------------------------------------------------------------- */
+
+/* ! Actual Code start here  */
+
+/* Changing font Globally*/
+html{
+
+    /* px means pixels . The base font size is now 10pixels high */
+    font-size: 10px;
+
+    /* Replace PLACEHOLDER with the font-family property value you got from Goolge Fonts  */
+    font-family: "Roboto",sans-serif;
+
+    background-color: #00539f;
+
+}
+
+h1{
+    font-size: 60px;
+    text-align: center;
+
+    /* since h1 is block element it occupies , uncomment below line to understand padding & margin */
+    /* background-color: black; */
+
+    /* positioning and styling */
+    margin : 0px; /* To eliminate gap at top , we override with 0px */
+    padding : 20px ; /* We set the heading's top with 20px & bottom with 0 */
+    color : #00539f;
+    text-shadow: 3px 3px 1px black; /* first value is horizontal offset of shadow from text : how far it move across
+                                          second value is vertical offset of the shadow from the text : how far it moves down
+                                          third pixel value set the blur radius of the shadow . A larger value produces a more fuzzy looking shadow 
+                                          The fourth value sets the base color of the shadow  */
+
+}
+
+
+body{
+    width: 900px; /* - 600 pixels wide */
+    margin : 0 auto ; /*- when you set two values  like margin or padding 
+                          first value affects element's top and bottom , 0 in this case 
+                          second value affects left and right , auto in this case  */
+    background-color: #ff9500; /* hex code reddish orange */
+    padding : 0 20px 20px 20px ; /*- this set four values for padding. The goal is to put some space around the content . In this example , 
+                                    there is no padding(space) on top of the body
+                                    2opixes on the right , bottom & left */
+
+    /*- above line is equivalent to 
+        padding-top : 0 ; 
+        padding-bottom : 20px ; 
+        padding-left : 20px ; 
+        padding-right : 20px ; */
+    border : 5px solid black; /*- this sets values for width , style & color of the border . In this case , it's a 5 pixels wide solid black border aounld all sides of the body */
+}
+
+p,
+li {
+    font-size: 16px;
+    line-height: 2;
+    letter-spacing: 1px;
+}
+
+/* Centering the image */ 
+/* The <body> eleement is block elemet , meaning it takes up space on the page and can accept maring , padding and other box properties . 
+<img> (image) elements , on the other hand ,are inline elements : by default , by default , they don't accept marigin values in the same way block elements do . for the auto-margin trick to work on thsi image ,we must give it BLOCK-LEVEL behavior by using display : block ;
+
+*/
+img{
+    display: block ;  /* This give block behaviour for inline elements */
+    margin : 0 auto ;  /* Read about this property in body */
+    max-width: 100%; /* we set max-width property to 1005 to ensure that if the image is larger than width set on the ody (600pixels) , it will be constrained to 600px and won't stretch wider */
+}
+
+/* ! Huge Respect MDN doc  */
+/* ! Future me , if you reading this or ever lost of CSS , Carefully read this enter file  */
